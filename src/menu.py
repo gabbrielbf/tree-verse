@@ -17,3 +17,36 @@ def read_numeric_option():
             print('[ERRO] Invalid value!\n')
             continue
 
+def numbered_menu():
+
+    options = [
+        'Insert',
+        'Search',
+        'Remove',
+        'Traversals',
+        'Height',
+        'Visualize',
+        'Exit'
+    ]
+
+    print('Choose one option bellow: ')
+    print('-'*30)
+    for index, option in enumerate(options, start=1):
+        print('{} - {}'.format(index, option))
+    print('-'*30)
+
+    while True:
+
+        try:
+            tentative = read_numeric_option()
+
+            if (tentative > 7 or
+            tentative < 0):
+                print('[ERROR] option not found\n')
+                continue
+        except ValueError:
+            print('[ERRO] Invalid value!\n')
+            continue
+        break
+
+    return tentative
