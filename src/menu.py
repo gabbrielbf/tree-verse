@@ -1,23 +1,27 @@
 import os
 
 def clear_terminal():
+    """ Function responsible for clearing the terminal on each iteration """
 
     input('Press ENTER to continue...')
-    os.system('cls' if os.name == 'nt' else 'clear')
-
+    os.system('cls' if os.name == 'nt' else 'clear') # <- Clears the terminal screen depending on the operating system
+                                                     # (Windows, Linux, or macOS)
     return
 
 def read_numeric_option():
+    """ Function that reads a numeric option and handles invalid inputs that are not numbers """
 
     while True:
 
         try:
-            return int(input('Choose one of the options above -> '))
+            return int(input('Choose one of the options above -> ')) # <- Returns a numeric value if the user provides a valid input
         except ValueError:
             print('[ERRO] Invalid value!\n')
             continue
 
 def numbered_menu():
+    """ Numbered menu that displays options dynamically using "enumerate" and "format", 
+    returning the chosen option after validation """
 
     options = [
         'Insert',
@@ -31,22 +35,19 @@ def numbered_menu():
 
     print('Choose one option bellow: ')
     print('-'*30)
-    for index, option in enumerate(options, start=1):
-        print('{} - {}'.format(index, option))
+    for index, option in enumerate(options, start=1): # <- This block reduces the repetition of multiple print statements 
+        print('{} - {}'.format(index, option))        # print statements and keeps the code clean and elegant
     print('-'*30)
 
     while True:
 
-        try:
-            tentative = read_numeric_option()
+        tentative = read_numeric_option()
 
-            if (tentative > 7 or
-            tentative < 0):
-                print('[ERROR] option not found\n')
-                continue
-        except ValueError:
-            print('[ERRO] Invalid value!\n')
+        if (tentative > 7 or
+        tentative < 0): # <- Checks if the user entered something within the suggested options before returning the function value
+            print('[ERROR] option not found\n')
             continue
-        break
+        else:
+            break
 
     return tentative
