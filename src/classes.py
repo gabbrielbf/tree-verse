@@ -118,3 +118,7 @@ class BinaryTree:
             return height_right + 1
         else:
             return height_left + 1
+
+
+class BinarySearchTree(BinaryTree):
+    pass
