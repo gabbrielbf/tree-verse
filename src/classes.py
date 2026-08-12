@@ -1,3 +1,5 @@
+ROOT = 'root' # Constant to store the 'root' value
+
 class Node:
     
     def __init__(self, data):
@@ -20,9 +22,9 @@ class BinaryTree:
         else:
             self.root = None # <- Default to empty root
 
-    # performs an in-order traversal, processing one item on each side at a time
-    def symmetric_traversal(self, node=None):
-        if node is None: # If the node is empty, traverse starting from the root
+    # performs an symmetric traversal, processing one item on each side at a time
+    def symmetric_traversal(self, node=ROOT):
+        if node == ROOT: # If the node is empty, traverse starting from the root
             node = self.root
 
         if node.left: 
@@ -32,4 +34,5 @@ class BinaryTree:
 
         if node.right:
             self.symmetric_traversal(node.right) # Displays the next item on the right
-        
+
+    
