@@ -121,25 +121,29 @@ class BinaryTree:
 
 
 class BinarySearchTree(BinaryTree):
+    """ Method responsible for inserting an element 
+    into a specific node at a given position in the tree """
 
     def insert(self, value):
 
-        parent = None
+        parent = None # Variable created to check the value size
+                        # Ex.
+        x = self.root   # We test if x is greater than y; if so, we place x to the right,
+                        # otherwise it will be allocated to the left.
+        while (x): # While this root value is not empty (not null)
 
-        x = self.root
-
-        while (x):
-
-            parent = x
+            parent = x # We define the parent based on the current value present at the root
 
             if value < x.data:
-                x = x.left
-            else:
+                x = x.left # And then we will advance this parent value in a direction
+            else:          # defined according to its size compared to the value of the data in the node
                 x.right
 
-        if parent is None:
-            self.root = Node(value)
+        if parent is None: # This creates a root with the parameter value
+            self.root = Node(value) # to become the root of the tree only IF the CURRENT root is empty
         elif value < parent.data:
             parent.left = Node(value)
         else:
             parent.right = Node(value)
+
+    
