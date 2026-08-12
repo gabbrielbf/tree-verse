@@ -23,33 +23,34 @@ class BinaryTree:
             self.root = None # <- Default to empty root
 
     def symmetric_traversal(self, node=ROOT):
-        """ performs an symmetric traversal, processing 
-        one item on each side at a time """
+        """ Performs a symmetric (in-order) traversal, processing the left subtree, 
+        then the current node, and finally the right subtree. """
 
-        if node == ROOT: # If the node is empty, traverse starting from the root
+        if node == ROOT: # # If the node is the default ROOT sentinel, start from the actual root
             node = self.root
 
         if node.left: 
-            self.symmetric_traversal(node.left) # Displays the items always starting from the left if an item exists at the position
+            self.symmetric_traversal(node.left) # Recursively traverse the left subtree
 
-        print(node)
+        print(node) # Display/process the current central node
 
         if node.right:
-            self.symmetric_traversal(node.right) # Displays the next item on the right
+            self.symmetric_traversal(node.right) # Recursively traverse the right subtree
 
     def postorder_traversal(self, node=ROOT):
-        """ performs an post-order traversal, processing all items of left subtree, 
-        all items of right subtree and finally, processes the central node, which in this case is the root."""
+        """ Performs a post-order traversal, processing all items of the left subtree, 
+        then all items of the right subtree, and finally the current node, 
+        which in this case would finally be the root node. """
 
         if node == ROOT:
             node = self.root
 
         if node.left:
-            self.postorder_traversal(node.left) # Continues traversing to the left until there are no more left nodes
+            self.postorder_traversal(node.left) # Traverse the left subtree first
 
         if node.right:
-            self.postorder_traversal(node.right) # Goes to the right after all left nodes have been returned
+            self.postorder_traversal(node.right) # Traverse the right subtree second
 
-        print(node) # Displays the current node; once all left and right subtrees are gone, it returns the root
+        print(node) # Process the current node after both subtrees are done
 
     
