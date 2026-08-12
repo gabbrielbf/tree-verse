@@ -80,3 +80,21 @@ class BinaryTree:
                 queue.push(node.right)
 
             print(node, end=' ')
+
+    def preorder_traversal(self, node=ROOT):
+        """ Performs a pre-order traversal, processing the root node first, followed by 
+        the left subtree and then the right subtree. Unlike post-order where the root comes 
+        last, here the root is always the immediate starting point """
+
+        if node == ROOT: 
+            node = self.root
+
+        print(node) # Displays the current node, which is currently the ROOT
+
+        if node.left: # Moves to the left subtree
+            self.preorder_traversal(node.left)
+
+        if node.right: # Moves to the right subtree after all left children have been visited
+            self.preorder_traversal(node.right)
+
+    
