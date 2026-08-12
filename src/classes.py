@@ -5,3 +5,6 @@ class Node:
         self.right = None # two pieces of data in cascade sequence
 
         return
+
+    def __str__(self): # Returns the given data as a string to avoid type compatibility issues
+        return str(self.data)
