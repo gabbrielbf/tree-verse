@@ -1,3 +1,5 @@
+from queue import Queue
+
 ROOT = 'root' # Constant to store the 'root' value
 
 class Node:
@@ -53,4 +55,28 @@ class BinaryTree:
 
         print(node) # Process the current node after both subtrees are done
 
-    
+    def levelorder_traversal(self, node=ROOT):
+        """ Performs a level-order traversal, processing all items level by level from 
+        top to bottom and from left to right, visiting all nodes present at the same 
+        depth before proceeding to the next level. """
+
+        if node == ROOT:
+            node = self.root
+
+        # We use a queue because of its FIFO (First In, First Out) property. 
+        # This ensures nodes are processed in the exact order they are 
+        # discovered—level by level, from top to bottom and left to right.
+        queue = Queue()
+        queue.push(node)
+
+        while len(queue): # While the queue size is greater than zero
+
+            node = queue.pop() # Remove and get the next node from the queue
+
+            if node.left: # Add the left child to the queue if it exists
+                queue.push(node.left)
+
+            if node.right: # Add the right child to the queue if it exists
+                queue.push(node.right)
+
+            print(node, end=' ')
