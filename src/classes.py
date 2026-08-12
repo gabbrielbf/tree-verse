@@ -121,4 +121,25 @@ class BinaryTree:
 
 
 class BinarySearchTree(BinaryTree):
-    pass
+
+    def insert(self, value):
+
+        parent = None
+
+        x = self.root
+
+        while (x):
+
+            parent = x
+
+            if value < x.data:
+                x = x.left
+            else:
+                x.right
+
+        if parent is None:
+            self.root = Node(value)
+        elif value < parent.data:
+            parent.left = Node(value)
+        else:
+            parent.right = Node(value)
