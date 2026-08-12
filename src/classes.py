@@ -97,4 +97,24 @@ class BinaryTree:
         if node.right: # Moves to the right subtree after all left children have been visited
             self.preorder_traversal(node.right)
 
-    
+    def height(self, node=ROOT):
+        """ Calculates the height of a tree based on the 
+        data present in a given node (if one exists) """
+
+        if node == ROOT:
+            node = self.root
+
+        height_left = 0 # { Values start at zero because in the conditions below we check IF the node value has an element;
+        height_right = 0 # } if it does, we perform the calculation, otherwise the value remains zero
+
+        if node.left:
+            height_left = self.height(node.left)
+
+        if node.right:
+            height_right = self.height(node.right)
+
+        # Calculating the height of the blocks
+        if height_right > height_left:
+            return height_right + 1
+        else:
+            return height_left + 1
