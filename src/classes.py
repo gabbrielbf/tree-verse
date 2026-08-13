@@ -119,6 +119,25 @@ class BinaryTree:
         else:
             return height_left + 1
 
+    def count_nodes(self, node=ROOT):
+
+
+        if node == ROOT: 
+            node = self.root
+
+        if node is None: 
+            return 0
+
+        count_left = 0 
+        count_right = 0 
+
+        if node.left: 
+            count_left = self.count_nodes(node.left)
+
+        if node.right: 
+            count_right = self.count_nodes(node.right)
+
+        return count_left + count_right + 1 
 
 class BinarySearchTree(BinaryTree):
 
