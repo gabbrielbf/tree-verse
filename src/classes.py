@@ -165,4 +165,14 @@ class BinarySearchTree(BinaryTree):
         else:
             return self.search(value, node.right) # Inverse operation.
 
-    
+    def search_min(self, node=ROOT):
+        """ We know that as a rule, the smallest value will always be 
+        to the left of the tree, so we search through all the left nodes 
+        until we find it and then return the stored data """
+
+        if node == ROOT:
+            node = self.root
+
+        while node.left: # While there is a left node, search to the left
+            node = node.left # until finding and returning the smallest value
+        return node.data
