@@ -120,24 +120,25 @@ class BinaryTree:
             return height_left + 1
 
     def count_nodes(self, node=ROOT):
-
+        """ Counts the total number of nodes present in the tree
+        starting from a given node or the root """
 
         if node == ROOT: 
             node = self.root
 
-        if node is None: 
+        if node is None: # If the node is empty or null, return zero nodes
             return 0
 
         count_left = 0 
         count_right = 0 
 
-        if node.left: 
+        if node.left: # If a left child exists, recursively count nodes in the left subtree
             count_left = self.count_nodes(node.left)
 
-        if node.right: 
+        if node.right: # Count nodes in the right subtree
             count_right = self.count_nodes(node.right)
 
-        return count_left + count_right + 1 
+        return count_left + count_right + 1 # Sum the nodes from both subtrees and add one for the current node
 
 class BinarySearchTree(BinaryTree):
 
