@@ -234,7 +234,9 @@ class BinarySearchTree(BinaryTree):
         return node.data
 
     def remove(self, value, node=ROOT):
-        
+        """ Method responsible for removing a specific node passed as a parameter; 
+        if none is passed, the sentinel root of the tree will be removed, and thus the 
+        logic for finding the successor will be applied """
     
         if node == ROOT:
             node = self.root
@@ -242,19 +244,19 @@ class BinarySearchTree(BinaryTree):
         if node is None:
             return node
 
-        if value < node.data: 
-            node.left = self.remove(value, node.left)
+        if value < node.data: # Check if the target value is smaller than current node data
+            node.left = self.remove(value, node.left) # Recursively search and remove in the left subtree
         elif value > node.data:
             node.right = self.remove(value, node.right)
-        else:
+        else: # Executed when the target node to delete is found
 
-            if node.left is None: 
-                return node.right 
+            if node.left is None: # Check if the node has no left child
+                return node.right # Return the right child to replace the current node
             elif node.right is None:
                 return node.left
-            else:
-                substitute = self.search_min(node.right) 
-                node.data = substitute 
-                node.right = self.remove(substitute, node.right) 
+            else: # Executed when the node has both left and right children
+                substitute = self.search_min(node.right) # Find the minimum value in the right subtree (in-order successor)
+                node.data = substitute # Replace the current node's data with the successor's data
+                node.right = self.remove(substitute, node.right) # Recursively remove the duplicate successor node from the right subtree
 
-            return node
+            return node # Return the updated node reference to maintain tree structure
