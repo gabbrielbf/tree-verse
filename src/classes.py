@@ -135,7 +135,7 @@ class BinaryTree:
         if node.left: # If a left child exists, recursively count nodes in the left subtree
             count_left = self.count_nodes(node.left)
 
-        if node.right: # Count nodes in the right subtree
+        if node.right: # Count nodes in the right subtree, if there are children
             count_right = self.count_nodes(node.right)
 
         return count_left + count_right + 1 # Sum the nodes from both subtrees and add one for the current node
@@ -147,11 +147,11 @@ class BinaryTree:
         if node == ROOT: 
             node = self.root
 
-        if node is None: 
+        if node is None: # If the node is empty or null, return zero leaves
             return 0
 
-        if node.left is None and node.right is None: 
-            return 1 
+        if node.left is None and node.right is None: # Check if the current node has no children, making it a leaf
+            return 1 # Return one because this current node is a leaf
 
         leaves_left = 0 
         leaves_right = 0 
@@ -162,7 +162,7 @@ class BinaryTree:
         if node.right: 
             leaves_right = self.count_leaves(node.right)
 
-        return leaves_left + leaves_right 
+        return leaves_left + leaves_right # Return the total sum of leaves found in both subtrees
 
     
 class BinarySearchTree(BinaryTree):
