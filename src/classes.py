@@ -121,10 +121,10 @@ class BinaryTree:
 
 
 class BinarySearchTree(BinaryTree):
-    """ Method responsible for inserting an element 
-    into a specific node at a given position in the tree """
 
     def insert(self, value):
+        """ Method responsible for inserting an element 
+        into a specific node at a given position in the tree """
 
         parent = None # Variable created to check the value size
                         # Ex.
@@ -146,4 +146,5 @@ class BinarySearchTree(BinaryTree):
         else:
             parent.right = Node(value)
 
+    
     
