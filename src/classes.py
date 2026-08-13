@@ -176,3 +176,16 @@ class BinarySearchTree(BinaryTree):
         while node.left: # While there is a left node, search to the left
             node = node.left # until finding and returning the smallest value
         return node.data
+
+    def search_max(self, node=ROOT):
+        """ The search logic for the maximum is the same as for the minimum, 
+        with the difference that it now goes to the right """
+
+        if node == ROOT:
+            node = self.root
+
+        while node.right:
+            node = node.right
+        return node.data
+
+    
