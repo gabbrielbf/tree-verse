@@ -147,18 +147,22 @@ class BinarySearchTree(BinaryTree):
             parent.right = Node(value)
 
     def search(self, value, node=0):
+        """ Responsible for searching for a given value within the tree starting from the root. 
+        If the user enters a value in the parameter, this value becomes the current root and the 
+        search will start from this new "subtree" """
 
+        if node == 0: # If the passed value was not found to
+            node = self.root # start the search for it, we begin searching from the root
 
-        if node == 0: 
-            node = self.root 
-        
-        if node is None or node.data == value:
-            return BinarySearchTree(node)
+        if node is None or node.data == value: # If the node is empty or the node equals the value we are looking for in the binary tree, 
+             return BinarySearchTree(node)     # we return a search on the subtree starting from that specific node. It doesn't make sense 
+                                               # to return the node itself because that would only be valid if we were working with lists; 
+                                               # since that is not the case, we can return a subtree starting from that specific node, 
+                                               # so as not to make the structure obsolete
 
-        if value < node.data:
-            return self.search(value, node.left)
+        if value < node.data: # In this other case, we check if the value is less than the current node,
+            return self.search(value, node.left) # going down to the left because the value is smaller than the current node.
         else:
-            return self.search(value, node.right)
+            return self.search(value, node.right) # Inverse operation.
 
-        
     
