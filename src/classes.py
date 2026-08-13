@@ -146,5 +146,19 @@ class BinarySearchTree(BinaryTree):
         else:
             parent.right = Node(value)
 
-    
+    def search(self, value, node=0):
+
+
+        if node == 0: 
+            node = self.root 
+        
+        if node is None or node.data == value:
+            return BinarySearchTree(node)
+
+        if value < node.data:
+            return self.search(value, node.left)
+        else:
+            return self.search(value, node.right)
+
+        
     
