@@ -44,10 +44,11 @@ def numbered_menu():
         tentative = read_numeric_option()
 
         if (tentative > 7 or
-        tentative < 0): # <- Checks if the user entered something within the suggested options before returning the function value
+        tentative < 1): # <- Checks if the user entered something within the suggested options before returning the function value
             print('[ERROR] option not found\n')
             continue
         else:
             break
 
     return tentative
+
