@@ -140,6 +140,31 @@ class BinaryTree:
 
         return count_left + count_right + 1 # Sum the nodes from both subtrees and add one for the current node
 
+    def count_leaves(self, node=ROOT):
+        """ Counts the total number of leaf nodes (nodes with no children)
+        starting from a given node or the root """
+
+        if node == ROOT: 
+            node = self.root
+
+        if node is None: 
+            return 0
+
+        if node.left is None and node.right is None: 
+            return 1 
+
+        leaves_left = 0 
+        leaves_right = 0 
+
+        if node.left: 
+            leaves_left = self.count_leaves(node.left)
+
+        if node.right: 
+            leaves_right = self.count_leaves(node.right)
+
+        return leaves_left + leaves_right 
+
+    
 class BinarySearchTree(BinaryTree):
 
     def insert(self, value):
