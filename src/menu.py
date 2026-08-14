@@ -56,7 +56,8 @@ def traversals():
     """ This function will define according to the user's decision
     which tree traversal will be performed """
     
-    traversals = ['Symmetric',
+    traversals = ['Tree',
+                'Symmetric',
                 'Post-Order',
                 'Level-Order',
                 'Pre-Order']
@@ -71,7 +72,7 @@ def traversals():
 
         tentative = read_numeric_option()
 
-        if (tentative > 4 or
+        if (tentative > 5 or
             tentative < 1):
             print('[ERROR] option not found\n')
             continue
