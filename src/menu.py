@@ -52,3 +52,31 @@ def numbered_menu():
 
     return tentative
 
+def traversals():
+    """ This function will define according to the user's decision
+    which tree traversal will be performed """
+    
+    traversals = ['Symmetric',
+                'Post-Order',
+                'Level-Order',
+                'Pre-Order']
+
+    print('Choose your traversal: ')
+    print('-'*30)
+    for index, traversal in enumerate(traversals, start=1):
+        print('{} - {}'.format(index, traversal))
+    print('-'*30)
+
+    while True:
+
+        tentative = read_numeric_option()
+
+        if (tentative > 4 or
+            tentative < 1):
+            print('[ERROR] option not found\n')
+            continue
+        else:
+            break
+
+    return tentative
+
