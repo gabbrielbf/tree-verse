@@ -9,16 +9,16 @@ class BinarySearchTree(BinaryTree):
 
         parent = None # Variable created to check the value size
                         # Ex.
-        x = self.root   # We test if x is greater than y; if so, we place x to the right,
+        current = self.root   # We test if x is greater than y; if so, we place x to the right,
                         # otherwise it will be allocated to the left.
-        while (x): # While this root value is not empty (not null)
+        while (current): # While this root value is not empty (not null)
 
-            parent = x # We define the parent based on the current value present at the root
+            parent = current # We define the parent based on the current value present at the root
 
-            if value < x.data:
-                x = x.left # And then we will advance this parent value in a direction
+            if value < current.data:
+                current = current.left # And then we will advance this parent value in a direction
             else:          # defined according to its size compared to the value of the data in the node
-                x = x.right
+                current = current.right
 
         if parent is None: # This creates a root with the parameter value
             self.root = Node(value) # to become the root of the tree only IF the CURRENT root is empty
