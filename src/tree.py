@@ -18,7 +18,7 @@ class BinarySearchTree(BinaryTree):
             if value < x.data:
                 x = x.left # And then we will advance this parent value in a direction
             else:          # defined according to its size compared to the value of the data in the node
-                x.right
+                x = x.right
 
         if parent is None: # This creates a root with the parameter value
             self.root = Node(value) # to become the root of the tree only IF the CURRENT root is empty
