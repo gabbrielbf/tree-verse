@@ -1,3 +1,5 @@
+import sys, time
+
 # Responsible for teaching the user everything about the "Tree" data structure.
 
 # _temp_stack.splitlines(): splits the original text into a list of lines (if there are line breaks)
@@ -15,6 +17,14 @@ def banner():
     _temp_stack = """🌳  WELCOME TO THE TREE-VERSE! 🌳"""
     BANNER = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
+    print(DIVIDER)
+        
+    for char in BANNER: # <- this block displays letter by letter of the header
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
     return BANNER
 
 def what_is_nodes():
@@ -23,13 +33,28 @@ def what_is_nodes():
     NODES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
     print(NODES)
 
+    print(DIVIDER)
+        
+    for char in NODES: 
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
     return 
 
 def what_is_leaves():
 
     _temp_stack = """ What are LEAVES? Isolated nodes at the end of trees with no connections below them """
     LEAVES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
-    print(LEAVES)
+
+    print(DIVIDER)
+
+    for char in LEAVES: 
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
 
     return 
 
