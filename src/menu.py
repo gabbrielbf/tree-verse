@@ -90,10 +90,13 @@ def teach_user():
     lessions = ['What is a NODE?',
                 'What is a LEAF?',
                 'What are FORESTS?',
-                'What is a SUBTREE?']
+                'What is a SUB-TREE?',
+                'What are BINARY-TREE?',
+                'What are HEIGHT, DEPTH, and PATHS?',
+                ]
 
     banner()
-    
+
     print('What would you like to learn?')
     print('-'*30)
     for index, lession in enumerate(lessions, start=1):
@@ -102,13 +105,13 @@ def teach_user():
 
     while True:
     
-            tentative = read_numeric_option()
+        tentative = read_numeric_option()
+
+        if (tentative > 5 or
+            tentative < 1):
+            print('[ERROR] option not found\n')
+            continue
+        else:
+            break
     
-            if (tentative > 5 or
-                tentative < 1):
-                print('[ERROR] option not found\n')
-                continue
-            else:
-                break
-    
-    
+  
