@@ -50,8 +50,27 @@ class Visualizer:
 
         return ((position * distance) + distance) // 2
 
-    
+    def display_tree(self):
+        """ Displays the tree in a hierarchical format """
 
+        if self.bst.root is None:
+            self._write('[Empty tree]\n')
+            return
+
+        levels = self._get_levels()
+        height = len(levels)
+
+        # Espaço mínimo entre dois nós.
+        largest_value = max(
+            len(str(node.data))
+            for level in levels
+            for node, _ in level
+        )
+
+        spacing = max(6, largest_value + 4)
+        width = (2 ** height) * spacing
+
+        
 
 def wich_traversal(bst):
 
