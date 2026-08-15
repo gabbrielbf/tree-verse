@@ -24,10 +24,10 @@ class Visualizer:
         current = levels[0]
 
         while current:
+
             next_level = []
 
             for node, position in current:
-                
                 if node.left:
                     next_level.append((node.left, position * 2))
 
@@ -70,7 +70,89 @@ class Visualizer:
         spacing = max(6, largest_value + 4)
         width = (2 ** height) * spacing
 
-        
+        # Lógica para os nós
+        for level_index, level in enumerate(levels):
+
+            line = [' '] * width
+
+            for node, position in level:
+
+                x = self._get_position(
+                    position,
+                    level_index,
+                    height,
+                    spacing
+                )
+
+            value = str(node.data)
+
+            start = x - len(value) // 2
+
+            for index, char in enumerate(value):
+                if 0 <= start + index < width:
+                    line[start + index] = char
+
+            self._write(''.join(line).rstrip() + '\n')
+
+            # Lógica para a conexão entre os nós
+            if level_index == height - 1:
+                continue
+
+            next_level = levels[level_index + 1]
+            connections = [' '] * width
+
+            for node, position in level:
+
+                parent_x = self._get_position(
+                    position,
+                    level_index,
+                    height,
+                    spacing
+                )
+
+                if node.left:
+                    child_x = self._get_position(
+                        position * 2,
+                        level_index + 1,
+                        height,
+                        spacing
+                    )
+
+                    x = (parent_x + child_x) // 2
+
+                    if 0 <= x < width:
+                        connections[x] = '/'
+
+                if node.right:
+                    child_x = self._get_position(
+                        position * 2 + 1,
+                        level_index + 1,
+                        height,
+                        spacing
+                    )
+
+                    x = (parent_x + child_x) // 2
+
+                    if 0 <= x < width:
+                        connections[x] = '\\'
+
+            self._write(''.join(connections).rstrip() + '\n')
+
+    # Percusos abaixo vão usar da lógica desenvolvida pelo método "display_tree" acima e elaborar suas próprias exibições de acordo
+    # com a sua respeciva característica de exibição
+    def _symmetric(self, node):
+        pass
+
+    def _preorder(self, node):
+        pass
+
+    def _postorder(self, node):
+        pass
+
+    def _levelorder(self):
+        pass
+
+
 
 def wich_traversal(bst):
 
