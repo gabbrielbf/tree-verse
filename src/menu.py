@@ -1,4 +1,5 @@
 import os
+from lessons import banner
 # from lessons import 
 
 def clear_terminal():
@@ -91,6 +92,8 @@ def teach_user():
                 'What are FORESTS?',
                 'What is a SUBTREE?']
 
+    banner()
+    
     print('What would you like to learn?')
     print('-'*30)
     for index, lession in enumerate(lessions, start=1):
