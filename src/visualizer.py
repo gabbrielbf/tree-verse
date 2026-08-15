@@ -42,6 +42,16 @@ class Visualizer:
 
         return levels
 
+    def _get_position(self, position, level, height, spacing):
+        """ Calculates the horizontal position of a node """
+
+        slots = 2 ** level
+        distance = spacing * (2 ** (height - level - 1))
+
+        return ((position * distance) + distance) // 2
+
+    
+
 
 def wich_traversal(bst):
 
