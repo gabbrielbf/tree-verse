@@ -1,4 +1,5 @@
 import os
+# from lessons import 
 
 def clear_terminal():
     """ Function responsible for clearing the terminal on each iteration """
@@ -81,3 +82,30 @@ def traversals():
 
     return tentative
 
+def teach_user():
+    """ This function will teach the user about EVERYTHING 
+    relevant regarding trees in the data structure """
+
+    lessions = ['What is a NODE?',
+                'What is a LEAF?',
+                'What are FORESTS?',
+                'What is a SUBTREE?']
+
+    print('What would you like to learn?')
+    print('-'*30)
+    for index, lession in enumerate(lessions, start=1):
+        print('{} - {}'.format(index, lession))
+    print('-'*30)
+
+    while True:
+    
+            tentative = read_numeric_option()
+    
+            if (tentative > 5 or
+                tentative < 1):
+                print('[ERROR] option not found\n')
+                continue
+            else:
+                break
+    
+    
