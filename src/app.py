@@ -1,13 +1,14 @@
 from tree import BinarySearchTree
-from menu import numbered_menu, clear_terminal
+from menu import numbered_menu, clear_terminal, teach_user
 from visualizer import wich_traversal
 
 bst = BinarySearchTree()
 
 def run_code():
 
+    teach_user()
     while True:
-
+        
         clear_terminal()
         match numbered_menu():
 
