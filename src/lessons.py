@@ -161,7 +161,7 @@ the top to the leaf located at the most superficial
 
 def what_are_traversals():
 
-    _temp_stack = """ What are TRAVERSALS? 
+    _temp_stack = """ - What are TRAVERSALS ⤵️  ? 
 Traversals define the order in which the nodes of 
 a tree are visited or processed. They are broadly 
 categorized into Depth-First Search (DFS) and 
@@ -235,7 +235,7 @@ the visitation order."""
 
 def what_is_bst():
 
-    _temp_stack = """ What is a BST (Binary Search Tree) 🌳?  
+    _temp_stack = """ - What is a BST (Binary Search Tree) 🌳 ?  
 A Binary Search Tree (BST) is a node-based data structure 
 where each node has at most two children (left and right). 
 Its defining property is order:
@@ -282,4 +282,47 @@ no right child. """
 
     input('\npress ENTER to continue...\n')
 
-    _temp_stack = """  """
+    _temp_stack = """ 🗑️  The 3 Types of Node Deletion in a BST: 
+    
+1. ❌  Deleting a Leaf Node (0 children): 
+
+    • The simplest case. The node has no descendants.
+
+    • How to do it: Simply disconnect the node from 
+    its parent by setting the parent's respective 
+    pointer to null.
+
+------------------------------------------------------------    
+
+2. ❌  Deleting a Node with 1 Child:
+
+    • The node has only one subtree (either left or right).
+
+    • How to do it: Remove the node and let its single 
+    child take its place, connecting directly to 
+    the deleted node's parent.
+    
+------------------------------------------------------------
+
+3. ❌  Deleting a Node with 2 Children: 
+
+    • The most complex case, as the node has both left 
+    and right subtrees.
+
+    • How to do it: To maintain BST properties, replace 
+    the value of the node to be deleted with its in-order 
+    successor (the smallest value in the right subtree) or 
+    in-order predecessor (the largest value in the 
+    left subtree). Then, delete that successor/predecessor 
+    from its original position."""
+
+    REMOVE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    print(DIVIDER)
+
+    for char in REMOVE:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
