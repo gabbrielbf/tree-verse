@@ -260,4 +260,26 @@ than the node's value.
 
     input('\npress ENTER to continue...\n')
 
+    _temp_stack = """ How to Find the Minimum and Maximum Value in a BST: 
+    
+📌 Minimum Value: Start at the root and traverse all the 
+way to the left (node.left) until you reach the node 
+with no left child.
+
+📌 Maximum Value: Start at the root and traverse all the 
+way to the right (node.right) until you reach the node with 
+no right child. """
+
+    MINANDMAX = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    print(DIVIDER)
+
+    for char in MINANDMAX:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    input('\npress ENTER to continue...\n')
+
     _temp_stack = """  """
