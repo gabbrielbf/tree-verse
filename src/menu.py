@@ -64,7 +64,7 @@ def traversals():
 
     return tentative
 
-def lessions():
+def lessons():
     """ This function will teach the user about EVERYTHING 
     relevant regarding trees in the data structure """
 
