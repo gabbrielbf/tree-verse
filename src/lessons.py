@@ -92,6 +92,7 @@ def what_is_height_depht_paths():
     _temp_stack = """ 1. Height - It is the length of the path between the root 
 and the leaf of greatest depth. """
     HEIGHT = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+    print()
 
     for char in HEIGHT: 
         sys.stdout.write(char)
@@ -121,8 +122,37 @@ selected by the user to the sentinel root of the tree."""
 
     return
 
-banner()
-what_is_nodes()
-what_is_leaves()
-what_is_binarytree()
-what_is_height_depht_paths()
+def minimum_maximum_height():
+
+    _temp_stack = """ 📌 Maximum Height (or simply Height): 
+It is the length of the longest possible path that goes 
+from the tree's root to the most distant leaf. Think of 
+a family tree or an organizational chart. The maximum 
+height represents how many "levels" or steps you need to 
+take to get from the top (root) to the deepest element 
+of the longest branch. """
+    MAXIMUM_HEIGHT = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    print(DIVIDER)
+
+    for char in MAXIMUM_HEIGHT: 
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    input('\npress ENTER to continue...\n')
+
+    _temp_stack = """ 📌 Minimum Height: 
+It is the length of the shortest possible path that goes 
+from the root to the closest leaf. It is the distance from 
+the top to the leaf located at the most superficial 
+(least deep) level of the entire structure. """
+    MINIMUM_HEIGHT = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    for char in MINIMUM_HEIGHT:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print() 
+
