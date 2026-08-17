@@ -63,7 +63,7 @@ connections below them. """
 
 def what_are_binarytree():
 
-    _temp_stack = """ - What is a BINARYTREE? 
+    _temp_stack = """ - What is a BINARYTREE 🌳? 
 It is a tree model that forces the developer to 
 provide exactly 2 children for every new node that 
 appears in the data structure. """
@@ -168,7 +168,6 @@ categorized into Depth-First Search (DFS) and
 Breadth-First Search (BFS). """
     TITLE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
-
     print(DIVIDER)
     
     for char in TITLE: 
@@ -179,7 +178,9 @@ Breadth-First Search (BFS). """
 
     input('\npress ENTER to continue...\n')
 
-    _temp_stack = """ 1. Syammetric (Left-Root-Right): 
+    _temp_stack = """ 📌 Depth-First Search (DFS):
+
+    1. Symmetric (Left-Root-Right): 
 Traverse the left subtree, visit the root, then 
 traverse the right subtree."""
     SYMMETRIC = "\n".join(l.center(57) for l in _temp_stack.splitlines())
@@ -190,4 +191,45 @@ traverse the right subtree."""
         time.sleep(0.04)
     print()
 
-what_are_traversals()
+    print()
+
+    _temp_stack = """ 2. Pre-order (Root-Left-Right): 
+Visit the root, traverse the left subtree, 
+then traverse the right subtree."""
+    PREORDER = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    for char in PREORDER:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    print()
+
+    _temp_stack = """ 3. Post-order (Left-Right-Root):
+Traverse the left subtree, traverse the right 
+subtree, and finally visit the root. """
+    POSTORDER = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    for char in POSTORDER:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    input('\npress ENTER to continue...\n')
+
+    _temp_stack = """ 📌 Breadth-First Search (BFS): 
+
+    1. Level-order (Breadth-first): 
+Visits nodes level by level, from left to right, starting 
+from the root. It uses a Queue data structure to manage 
+the visitation order."""
+    LEVELORDER = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    for char in LEVELORDER:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
