@@ -1,25 +1,6 @@
-import os
 from lessons import banner
+from utils import read_numeric_option
 # from lessons import 
-
-def clear_terminal():
-    """ Function responsible for clearing the terminal on each iteration """
-
-    input('Press ENTER to continue...')
-    os.system('cls' if os.name == 'nt' else 'clear') # <- Clears the terminal screen depending on the operating system
-                                                     # (Windows, Linux, or macOS)
-    return
-
-def read_numeric_option():
-    """ Function that reads a numeric option and handles invalid inputs that are not numbers """
-
-    while True:
-
-        try:
-            return int(input('Choose one of the options above -> ')) # <- Returns a numeric value if the user provides a valid input
-        except ValueError:
-            print('[ERRO] Invalid value!\n')
-            continue
 
 def numbered_menu():
     """ Numbered menu that displays options dynamically using "enumerate" and "format", 
@@ -83,7 +64,7 @@ def traversals():
 
     return tentative
 
-def teach_user():
+def lessions():
     """ This function will teach the user about EVERYTHING 
     relevant regarding trees in the data structure """
 
@@ -116,5 +97,6 @@ def teach_user():
             continue
         else:
             break
-    
-  
+
+def teach_user():
+    pass
