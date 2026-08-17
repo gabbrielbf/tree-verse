@@ -233,3 +233,31 @@ the visitation order."""
         time.sleep(0.04)
     print()
 
+def what_is_bst():
+
+    _temp_stack = """ What is a BST (Binary Search Tree) 🌳?  
+A Binary Search Tree (BST) is a node-based data structure 
+where each node has at most two children (left and right). 
+Its defining property is order:
+
+• All values in the left subtree of a node are smaller 
+than the node's value.
+
+• All values in the right subtree are larger 
+than the node's value.
+
+• This rule applies recursively to all subtrees. """
+
+    BST = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    print(DIVIDER)
+
+    for char in BST:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    input('\npress ENTER to continue...\n')
+
+    _temp_stack = """  """
