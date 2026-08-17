@@ -1,5 +1,8 @@
-from lessons import banner
-from utils import read_numeric_option
+from lessons import (banner, what_is_nodes, what_is_leaves,
+                     what_are_binarytree, what_are_height_depht_paths,
+                     minimum_maximum_height, what_are_traversals, what_is_bst,
+                     what_are_forests, what_is_subtree)
+from utils import read_numeric_option, clear_terminal
 # from lessons import 
 
 def numbered_menu():
@@ -78,9 +81,8 @@ def lessons():
                 'What are TRAVERSALS?',
                 'What is a BINARY-SEARCH-TREE?'
                 ]
-
+    
     banner()
-
     print('What would you like to learn?')
     print('-'*30)
     for index, lession in enumerate(lessions, start=1):
@@ -98,5 +100,43 @@ def lessons():
         else:
             break
 
+    return tentative
+
 def teach_user():
-    pass
+    """ Function that will put the user in a learning loop
+    until they decide they want to use the program by choosing to 'exit' the while. """
+
+    learn_more = 'y'.upper()
+
+    while learn_more:
+
+        clear_terminal()
+        match lessons():
+
+            case 1:
+                what_is_nodes()
+            case 2:
+                what_is_leaves()
+            case 3:
+                what_are_forests()
+            case 4:
+                what_is_subtree()
+            case 5:
+                what_are_binarytree()
+            case 6:
+                what_are_height_depht_paths()
+            case 7:
+                minimum_maximum_height()
+            case 8:
+                what_are_traversals()
+            case 9:
+                what_is_bst()
+
+        again = str(input('Do you want to learn something else? ')).upper()
+
+        if again == 'Y':
+            print("Let's learn more!")
+            learn_more = again
+        else:
+            print("Ok, let's move on to practice then\n")
+            learn_more = again
