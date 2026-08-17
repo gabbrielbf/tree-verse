@@ -93,6 +93,8 @@ def teach_user():
                 'What is a SUB-TREE?',
                 'What are BINARY-TREE?',
                 'What are HEIGHT, DEPTH, and PATHS?',
+                'What is MINIMUM and MAXIMUM Height?',
+                'What are TRAVERSALS?'
                 ]
 
     banner()
@@ -107,7 +109,7 @@ def teach_user():
     
         tentative = read_numeric_option()
 
-        if (tentative > 5 or
+        if (tentative > 8 or
             tentative < 1):
             print('[ERROR] option not found\n')
             continue
