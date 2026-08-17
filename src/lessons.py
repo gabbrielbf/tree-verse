@@ -23,8 +23,10 @@ def banner():
     for char in BANNER: # <- this block displays letter by letter of the header
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
+
+    print(DIVIDER)
 
     return 
 
@@ -35,6 +37,7 @@ Connection of non-linear information through
 a specific root. """
     NODES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
+    clear_terminal()
     print(DIVIDER)
         
     for char in NODES: 
@@ -43,15 +46,18 @@ a specific root. """
         time.sleep(0.04)
     print()
 
+    print(DIVIDER)
+
     return 
 
 def what_is_leaves():
 
-    _temp_stack = """ - What are LEAVES 🍃  ? 
+    _temp_stack = """ - What are LEAVES 🍃 ? 
 Isolated nodes at the end of trees with no 
 connections below them. """
     LEAVES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
+    clear_terminal()
     print(DIVIDER)
 
     for char in LEAVES: 
@@ -60,7 +66,54 @@ connections below them. """
         time.sleep(0.04)
     print()
 
+    print(DIVIDER)
+
     return 
+
+def what_are_forests():
+
+    _temp_stack = """ - What are FORESTS?  🌳🌳🌳:
+    Several sets of 2 or more isolated nodes 
+    not connected to each other """
+    FORESTS = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    clear_terminal()
+    print(DIVIDER)
+
+    for char in FORESTS: 
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    print(DIVIDER)
+
+    return
+
+def what_is_subtree():
+
+    _temp_stack = """ What is a SUBTREE? 🌳⤵️ :
+A subtree is a portion of a tree data structure 
+that consists of a specific node 
+(called the root of the subtree) and all of its 
+descendants (its children, grandchildren, and so on). 
+Essentially, every node in a tree can be considered 
+the root of its own smaller, self-contained tree. """
+
+    SUBTREE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    clear_terminal()
+    print(DIVIDER)
+
+    for char in SUBTREE:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    print(DIVIDER)
+
+    return
 
 def what_are_binarytree():
 
@@ -70,6 +123,7 @@ provide exactly 2 children for every new node that
 appears in the data structure. """
     BINARYTREE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
+    clear_terminal()
     print(DIVIDER)
 
     for char in BINARYTREE: 
@@ -78,10 +132,13 @@ appears in the data structure. """
         time.sleep(0.04)
     print()
 
+    print(DIVIDER)
+
     return
 
 def what_are_height_depht_paths():
 
+    clear_terminal()
     print(DIVIDER)
 
     _temp_stack = """ - What are Height, Depth, and Paths in TREES 🌳: """
@@ -124,6 +181,8 @@ selected by the user to the sentinel root of the tree."""
         time.sleep(0.04)
     print()
 
+    print(DIVIDER)
+
     return
 
 def minimum_maximum_height():
@@ -137,6 +196,7 @@ take to get from the top (root) to the deepest element
 of the longest branch. """
     MAXIMUM_HEIGHT = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
+    clear_terminal()
     print(DIVIDER)
 
     for char in MAXIMUM_HEIGHT: 
@@ -160,6 +220,8 @@ the top to the leaf located at the most superficial
         time.sleep(0.04)
     print() 
 
+    print(DIVIDER)
+
     return
 
 def what_are_traversals():
@@ -171,6 +233,7 @@ categorized into Depth-First Search (DFS) and
 Breadth-First Search (BFS). """
     TITLE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
+    clear_terminal()
     print(DIVIDER)
     
     for char in TITLE: 
@@ -257,6 +320,7 @@ than the node's value.
 
     BST = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
+    clear_terminal()
     print(DIVIDER)
 
     for char in BST:
@@ -279,8 +343,6 @@ way to the right (node.right) until you reach the node with
 no right child. """
 
     MINANDMAX = "\n".join(l.center(57) for l in _temp_stack.splitlines())
-
-    print(DIVIDER)
 
     for char in MINANDMAX:
         sys.stdout.write(char)
@@ -324,16 +386,15 @@ no right child. """
     in-order predecessor (the largest value in the 
     left subtree). Then, delete that successor/predecessor 
     from its original position."""
-
     REMOVE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
-
-    print(DIVIDER)
 
     for char in REMOVE:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.04)
     print()
+
+    print(DIVIDER)
 
     return
 
