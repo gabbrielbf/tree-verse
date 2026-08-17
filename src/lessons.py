@@ -29,8 +29,9 @@ def banner():
 
 def what_is_nodes():
 
-    _temp_stack = """ - What are NODES? Connection of non-linear information 
-through a specific root. """
+    _temp_stack = """ - What are NODES? 
+Connection of non-linear information through 
+a specific root. """
     NODES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
     print(DIVIDER)
@@ -45,8 +46,9 @@ through a specific root. """
 
 def what_is_leaves():
 
-    _temp_stack = """ - What are LEAVES? Isolated nodes at the end of 
-trees with no connections below them. """
+    _temp_stack = """ - What are LEAVES? 
+Isolated nodes at the end of trees with no 
+connections below them. """
     LEAVES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
     print(DIVIDER)
@@ -59,11 +61,12 @@ trees with no connections below them. """
 
     return 
 
-def what_is_binarytree():
+def what_are_binarytree():
 
-    _temp_stack = """ - What is a BINARYTREE? It is a tree model that forces 
-the developer to provide exactly 2 children for every 
-new node that appears in the data structure. """
+    _temp_stack = """ - What is a BINARYTREE? 
+It is a tree model that forces the developer to 
+provide exactly 2 children for every new node that 
+appears in the data structure. """
     BINARYTREE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
     print(DIVIDER)
@@ -76,7 +79,7 @@ new node that appears in the data structure. """
 
     return
 
-def what_is_height_depht_paths():
+def what_are_height_depht_paths():
 
     print(DIVIDER)
 
@@ -156,3 +159,35 @@ the top to the leaf located at the most superficial
         time.sleep(0.04)
     print() 
 
+def what_are_traversals():
+
+    _temp_stack = """ What are TRAVERSALS? 
+Traversals define the order in which the nodes of 
+a tree are visited or processed. They are broadly 
+categorized into Depth-First Search (DFS) and 
+Breadth-First Search (BFS). """
+    TITLE = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+
+    print(DIVIDER)
+    
+    for char in TITLE: 
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+    input('\npress ENTER to continue...\n')
+
+    _temp_stack = """ 1. Syammetric (Left-Root-Right): 
+Traverse the left subtree, visit the root, then 
+traverse the right subtree."""
+    SYMMETRIC = "\n".join(l.center(57) for l in _temp_stack.splitlines())
+
+    for char in SYMMETRIC:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    print()
+
+what_are_traversals()
