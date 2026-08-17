@@ -1,4 +1,5 @@
 import sys, time
+from utils import clear_terminal
 
 # Responsible for teaching the user everything about the "Tree" data structure.
 
@@ -46,7 +47,7 @@ a specific root. """
 
 def what_is_leaves():
 
-    _temp_stack = """ - What are LEAVES? 
+    _temp_stack = """ - What are LEAVES 🍃  ? 
 Isolated nodes at the end of trees with no 
 connections below them. """
     LEAVES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
@@ -144,7 +145,7 @@ of the longest branch. """
         time.sleep(0.04)
     print()
 
-    input('\npress ENTER to continue...\n')
+    input('\n Press ENTER to continue...\n')
 
     _temp_stack = """ 📌 Minimum Height: 
 It is the length of the shortest possible path that goes 
@@ -158,6 +159,8 @@ the top to the leaf located at the most superficial
         sys.stdout.flush()
         time.sleep(0.04)
     print() 
+
+    return
 
 def what_are_traversals():
 
@@ -175,8 +178,9 @@ Breadth-First Search (BFS). """
         sys.stdout.flush()
         time.sleep(0.04)
     print()
-
-    input('\npress ENTER to continue...\n')
+    
+    clear_terminal()
+    print(DIVIDER)
 
     _temp_stack = """ 📌 Depth-First Search (DFS):
 
@@ -217,7 +221,8 @@ subtree, and finally visit the root. """
         time.sleep(0.04)
     print()
 
-    input('\npress ENTER to continue...\n')
+    clear_terminal()
+    print(DIVIDER)
 
     _temp_stack = """ 📌 Breadth-First Search (BFS): 
 
@@ -232,6 +237,8 @@ the visitation order."""
         sys.stdout.flush()
         time.sleep(0.04)
     print()
+
+    return
 
 def what_is_bst():
 
@@ -258,7 +265,8 @@ than the node's value.
         time.sleep(0.04)
     print()
 
-    input('\npress ENTER to continue...\n')
+    clear_terminal()
+    print(DIVIDER)
 
     _temp_stack = """ How to Find the Minimum and Maximum Value in a BST: 
     
@@ -280,7 +288,8 @@ no right child. """
         time.sleep(0.04)
     print()
 
-    input('\npress ENTER to continue...\n')
+    clear_terminal()
+    print(DIVIDER)
 
     _temp_stack = """ 🗑️  The 3 Types of Node Deletion in a BST: 
     
@@ -325,4 +334,6 @@ no right child. """
         sys.stdout.flush()
         time.sleep(0.04)
     print()
+
+    return
 
