@@ -106,7 +106,7 @@ def teach_user():
     """ Function that will put the user in a learning loop
     until they decide they want to use the program by choosing to 'exit' the while. """
 
-    learn_more = 'y'.upper()
+    learn_more = 'Y'
 
     while learn_more:
 
@@ -134,9 +134,8 @@ def teach_user():
 
         again = str(input('Do you want to learn something else? ')).upper()
 
-        if again == 'Y':
-            print("Let's learn more!")
-            learn_more = again
-        else:
-            print("Ok, let's move on to practice then\n")
-            learn_more = again
+        if again != 'Y':
+            print("Ok, let's move on to practice then")
+            break
+        
+        print("Let's learn more!")
