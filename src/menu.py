@@ -43,7 +43,7 @@ def numbered_menu():
         'Traversals',
         'Height',
         'Nodes',
-        'Leaves'
+        'Leaves',
         'Visualize',
         'Exit'
     ]
