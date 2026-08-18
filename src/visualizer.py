@@ -153,7 +153,10 @@ class Visualizer:
             yield from self._preorder(node.right)
 
     def _postorder(self, node):
-        pass
+        if node:
+            yield from self._postorder(node.left)
+            yield from self._postorder(node.right)
+            yield node.data
 
     def _levelorder(self):
         pass
