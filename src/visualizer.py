@@ -141,7 +141,10 @@ class Visualizer:
     # Percusos abaixo vão usar da lógica desenvolvida pelo método "display_tree" acima e elaborar suas próprias exibições de acordo
     # com a sua respeciva característica de exibição
     def _symmetric(self, node):
-        pass
+        if node:
+            yield from self._symmetric(node.left)
+            yield node.data
+            yield from self._symmetric(node.right)
 
     def _preorder(self, node):
         pass
