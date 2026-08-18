@@ -228,17 +228,13 @@ def wich_traversal(bst):
 
     match traversals():
         case 1:
-            pass
-
+            visualizer.display_tree()
         case 2:
-            pass
-
+            visualizer.display_symmetric()
         case 3:
-            pass
-
+            visualizer.display_postorder()
         case 4:
-            pass
-
+            visualizer.display_level()
         case 5:
-            pass
+            visualizer.display_preorder()
 
