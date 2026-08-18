@@ -147,7 +147,10 @@ class Visualizer:
             yield from self._symmetric(node.right)
 
     def _preorder(self, node):
-        pass
+        if node:
+            yield node.data
+            yield from self._preorder(node.left)
+            yield from self._preorder(node.right)
 
     def _postorder(self, node):
         pass
