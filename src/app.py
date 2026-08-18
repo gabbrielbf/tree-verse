@@ -1,5 +1,5 @@
 from tree import BinarySearchTree
-from menu import numbered_menu, clear_terminal, teach_user
+from menu import numbered_menu, clear_terminal, teach_user, exit_program
 from visualizer import wich_traversal
 
 bst = BinarySearchTree()
@@ -30,6 +30,9 @@ def run_code():
             case 6:
                 pass
             case 7:
-                pass
+                if exit_program() == True:
+                    break
+                else:
+                    continue
 
 run_code()
