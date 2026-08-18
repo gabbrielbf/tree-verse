@@ -159,7 +159,21 @@ class Visualizer:
             yield node.data
 
     def _levelorder(self):
-        pass
+        if self.bst.root is None:
+            return
+
+        queue = [self.bst.root]
+
+        while queue:
+            node = queue.pop(0)
+
+            yield node.data
+
+            if node.left:
+                queue.append(node.left)
+
+            if node.right:
+                queue.append(node.right)
 
 
 
