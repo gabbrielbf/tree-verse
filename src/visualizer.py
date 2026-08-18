@@ -205,7 +205,13 @@ class Visualizer:
             self._preorder(self.bst.root)
         )
 
-    
+    def display_postorder(self):
+        self.display_tree()
+
+        self._display_traversal(
+            'Percurso Pós-Ordem',
+            self._postorder(self.bst.root)
+        )
 def wich_traversal(bst):
 
     visualizer = Visualizer(bst)
