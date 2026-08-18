@@ -175,7 +175,19 @@ class Visualizer:
             if node.right:
                 queue.append(node.right)
 
+    def _display_traversal(self, title, values):
+        if self.bst.root is None:
+            self._write('[Árvore vazia]\n')
+            return
 
+        self._write(f'\n{title}\n')
+        self._write('-' * len(title) + '\n')
+
+        for value in values:
+            self._write(f'{value} ', 0.04)
+            time.sleep(0.2)
+
+        self._write('\n')
 
 def wich_traversal(bst):
 
