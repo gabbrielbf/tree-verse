@@ -189,6 +189,15 @@ class Visualizer:
 
         self._write('\n')
 
+    def display_symmetric(self):
+        self.display_tree()
+
+        self._display_traversal(
+            'Percurso Simétrico',
+            self._symmetric(self.bst.root)
+        )
+
+    
 def wich_traversal(bst):
 
     visualizer = Visualizer(bst)
