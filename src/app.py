@@ -30,6 +30,10 @@ def run_code():
             case 6:
                 pass
             case 7:
+                pass
+            case 8:
+                pass
+            case 9:
                 if exit_program() == True:
                     break
                 else:
