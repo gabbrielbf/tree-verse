@@ -5,6 +5,33 @@ from lessons import (banner, what_is_nodes, what_is_leaves,
 from utils import read_numeric_option, clear_terminal
 # from lessons import 
 
+def exit_program():
+    """ function that exits (or not) the program
+    according to a user interaction """
+
+    while True:
+        try:
+
+            certainty = str(input('Are you sure you want to exit?[Y/N]: ')).lower().strip()
+
+            if certainty != 'y' and certainty != 'n': # <- Checks if the user typed something other than Y or N
+                print('\n[ERROR] Only [Y/N]!')
+                continue
+
+        except ValueError:
+            print('\n[ERROR] Invalid value.\n')
+            continue
+        break
+
+    if certainty == 'y':
+        print('\nProgram ended.\n') # <- EXITS
+        return True
+
+    elif certainty == 'n':
+        print('\nThen let\'s go back!\n') # <- GOES BACK TO THE MENU
+
+    return False
+
 def numbered_menu():
     """ Numbered menu that displays options dynamically using "enumerate" and "format", 
     returning the chosen option after validation """
