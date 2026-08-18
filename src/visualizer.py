@@ -212,6 +212,16 @@ class Visualizer:
             'Percurso Pós-Ordem',
             self._postorder(self.bst.root)
         )
+
+    def display_level(self):
+        self.display_tree()
+
+        self._display_traversal(
+            'Percurso Nível a Nível',
+            self._levelorder()
+        )
+
+    
 def wich_traversal(bst):
 
     visualizer = Visualizer(bst)
