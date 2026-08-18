@@ -56,7 +56,7 @@ class Visualizer:
         """ Displays the tree in a hierarchical format """
 
         if self.bst.root is None:
-            self._write('[Empty tree]\n')
+            self._write('\n[Empty tree]\n')
             return
 
         levels = self._get_levels() # Gets all tree levels.
@@ -212,7 +212,6 @@ class Visualizer:
         """ Displays the tree itself, method to be used by the traversals below """
 
         if self.bst.root is None:
-            self._write('[Empty tree]\n')
             return
 
         self._write(f'\n{title}\n')
