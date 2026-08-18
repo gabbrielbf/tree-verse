@@ -197,6 +197,14 @@ class Visualizer:
             self._symmetric(self.bst.root)
         )
 
+    def display_preorder(self):
+        self.display_tree()
+
+        self._display_traversal(
+            'Percurso Pré-Ordem',
+            self._preorder(self.bst.root)
+        )
+
     
 def wich_traversal(bst):
 
