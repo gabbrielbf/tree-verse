@@ -1,0 +1,8 @@
+# This file contains external libraries used to improve the display 
+# and functionality of the program, along with their respective versions
+
+# pytest: used for automated testing of project logic files
+pytest==9.1.1
+
+# rich: used to display menu items, lessons, and trees in a more didactic and conceptual way
+rich==15.0.0
