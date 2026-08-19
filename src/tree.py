@@ -50,19 +50,13 @@ class BinarySearchTree(BinaryTree):
         """ We know that as a rule, the smallest value will always be 
         to the left of the tree, so we search through all the left nodes 
         until we find it and then return the stored data """
-
+        
         if node == ROOT:
             node = self.root
 
-        if node is None:
-                    
-            TEXT = '\n[Empty tree]\n'
-            
-            for char in TEXT:
-                sys.stdout.write(char) # Displays text letter by letter to make 
-                sys.stdout.flush() # the terminal output dynamic and interactive for the user
-                time.sleep(0.04)
-            return 
+        if node is None: 
+            TEXT = '[Empty tree]'
+            return TEXT
 
         while node.left: # While there is a left node, search to the left
             node = node.left # until finding and returning the smallest value
@@ -75,15 +69,9 @@ class BinarySearchTree(BinaryTree):
         if node == ROOT:
             node = self.root
 
-        if node is None:
-                            
-            TEXT = '\n[Empty tree]\n'
-            
-            for char in TEXT:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.04)
-            return 
+        if node is None: 
+            TEXT = '[Empty tree]'
+            return TEXT
 
         while node.right:
             node = node.right
