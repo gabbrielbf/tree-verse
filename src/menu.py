@@ -42,8 +42,7 @@ def numbered_menu():
         'Remove',
         'Traversals',
         'Height',
-        'Nodes',
-        'Leaves',
+        'Count',
         'Visualize',
         'Exit'
     ]
@@ -58,7 +57,7 @@ def numbered_menu():
 
         tentative = read_numeric_option()
 
-        if (tentative > 9 or
+        if (tentative > 8 or
         tentative < 1): # <- Checks if the user entered something within the suggested options before returning the function value
             print('[ERROR] option not found\n')
             continue
