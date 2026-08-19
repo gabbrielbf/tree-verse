@@ -16,15 +16,23 @@ def run_code():
                 try:
                     value = int(input('Which value to insert -> '))
                     bst.insert(value)
-                    print(f'Value [{value}] successfully inserted ✅\n')
+                    print(f'Value [{value}] successfully inserted ✅')
                 except ValueError:
-                    print('[ERROR] Invalid value!\n')
+                    print('\n[ERROR] Invalid value!\n')
             case 2:
                 pass
             case 3:
                 pass
             case 4:
-                wich_traversal(bst)
+                print('\n[SYMMETRIC]:')
+                bst.symmetric_traversal()
+                print('\n[POST-ORDER]:')
+                bst.postorder_traversal()
+                print('\n[PRE-ORDER]:')
+                bst.preorder_traversal()
+                print('\n[LEVEL-ORDER]:')
+                bst.levelorder_traversal()
+                print()
             case 5:
                 pass
             case 6:
@@ -32,7 +40,7 @@ def run_code():
             case 7:
                 pass
             case 8:
-                pass
+                wich_traversal(bst)
             case 9:
                 if exit_program() == True:
                     break
