@@ -32,6 +32,16 @@ class BinaryTree:
         if node == ROOT: # # If the node is the default ROOT sentinel, start from the actual root
             node = self.root
 
+        if node is None:
+            
+            TEXT = '\n[Empty tree]\n'
+            
+            for char in TEXT:
+                sys.stdout.write(char) # Displays text letter by letter to make 
+                sys.stdout.flush() # the terminal output dynamic and interactive for the user
+                time.sleep(0.04)
+            return 
+
         if node.left: 
             self.symmetric_traversal(node.left) # Recursively traverse the left subtree
 
@@ -48,6 +58,16 @@ class BinaryTree:
         if node == ROOT:
             node = self.root
 
+        if node is None:
+        
+            TEXT = '\n[Empty tree]\n'
+            
+            for char in TEXT:
+                sys.stdout.write(char)
+                sys.stdout.flush() 
+                time.sleep(0.04)
+            return 
+
         if node.left:
             self.postorder_traversal(node.left) # Traverse the left subtree first
 
@@ -63,6 +83,16 @@ class BinaryTree:
 
         if node == ROOT:
             node = self.root
+
+        if node is None:
+        
+            TEXT = '\n[Empty tree]\n'
+            
+            for char in TEXT:
+                sys.stdout.write(char)
+                sys.stdout.flush() 
+                time.sleep(0.04)
+            return 
 
         # We use a queue because of its FIFO (First In, First Out) property. 
         # This ensures nodes are processed in the exact order they are 
@@ -89,6 +119,16 @@ class BinaryTree:
 
         if node == ROOT: 
             node = self.root
+
+        if node is None:
+        
+            TEXT = '\n[Empty tree]\n'
+            
+            for char in TEXT:
+                sys.stdout.write(char)
+                sys.stdout.flush() 
+                time.sleep(0.04)
+            return 
 
         print(node, end=' ') # Displays the current node, which is currently the ROOT
 
