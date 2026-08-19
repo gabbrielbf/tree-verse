@@ -1,4 +1,5 @@
 from queue import Queue
+import time, sys
 
 ROOT = 'root' # "Constant" to store the 'root' value
 
@@ -127,6 +128,13 @@ class BinaryTree:
             node = self.root
 
         if node is None: # If the node is empty or null, return zero nodes
+
+            TEXT = '\n[Empty tree]\n'
+
+            for char in TEXT:
+                sys.stdout.write(char) # Displays text letter by letter to make 
+                sys.stdout.flush() # the terminal output dynamic and interactive for the user
+                time.sleep(0.04)
             return 0
 
         count_left = 0 
@@ -148,6 +156,12 @@ class BinaryTree:
             node = self.root
 
         if node is None: # If the node is empty or null, return zero leaves
+            TEXT = '\n[Empty tree]\n'
+            
+            for char in TEXT:
+                sys.stdout.write(char) 
+                sys.stdout.flush()
+                time.sleep(0.04)
             return 0
 
         if node.left is None and node.right is None: # Check if the current node has no children, making it a leaf
