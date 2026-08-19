@@ -1,5 +1,5 @@
 from classes import BinaryTree, Node, ROOT
-
+import sys, time
 
 class BinarySearchTree(BinaryTree):
 
@@ -54,6 +54,16 @@ class BinarySearchTree(BinaryTree):
         if node == ROOT:
             node = self.root
 
+        if node is None:
+                    
+            TEXT = '\n[Empty tree]\n'
+            
+            for char in TEXT:
+                sys.stdout.write(char) # Displays text letter by letter to make 
+                sys.stdout.flush() # the terminal output dynamic and interactive for the user
+                time.sleep(0.04)
+            return 
+
         while node.left: # While there is a left node, search to the left
             node = node.left # until finding and returning the smallest value
         return node.data
@@ -64,6 +74,16 @@ class BinarySearchTree(BinaryTree):
 
         if node == ROOT:
             node = self.root
+
+        if node is None:
+                            
+            TEXT = '\n[Empty tree]\n'
+            
+            for char in TEXT:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.04)
+            return 
 
         while node.right:
             node = node.right
