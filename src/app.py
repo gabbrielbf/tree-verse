@@ -32,7 +32,6 @@ def run_code():
                 bst.preorder_traversal()
                 print('\n[LEVEL-ORDER]:')
                 bst.levelorder_traversal()
-                print()
             case 5:
                 pass
             case 6:
