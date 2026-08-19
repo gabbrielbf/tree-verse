@@ -20,7 +20,9 @@ def run_code():
                 except ValueError:
                     print('\n[ERROR] Invalid value!\n')
             case 2:
-                pass
+                print(f'\n[MAX. Value]: {bst.search_max()}')
+                print()
+                print(f'[MIN. Value]: {bst.search_min()}')
             case 3:
                 pass
             case 4:
