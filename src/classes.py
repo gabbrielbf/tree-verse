@@ -35,7 +35,7 @@ class BinaryTree:
         if node.left: 
             self.symmetric_traversal(node.left) # Recursively traverse the left subtree
 
-        print(node) # Display/process the current central node
+        print(node, end=' ') # Display/process the current central node
 
         if node.right:
             self.symmetric_traversal(node.right) # Recursively traverse the right subtree
@@ -54,7 +54,7 @@ class BinaryTree:
         if node.right:
             self.postorder_traversal(node.right) # Traverse the right subtree second
 
-        print(node) # Process the current node after both subtrees are done
+        print(node, end=' ') # Process the current node after both subtrees are done
 
     def levelorder_traversal(self, node=ROOT):
         """ Performs a level-order traversal, processing all items level by level from 
@@ -90,7 +90,7 @@ class BinaryTree:
         if node == ROOT: 
             node = self.root
 
-        print(node) # Displays the current node, which is currently the ROOT
+        print(node, end=' ') # Displays the current node, which is currently the ROOT
 
         if node.left: # Moves to the left subtree
             self.preorder_traversal(node.left)
