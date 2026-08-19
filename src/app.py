@@ -13,12 +13,15 @@ def run_code():
         match numbered_menu():
 
             case 1:
-                try:
-                    value = int(input('Which value to insert -> '))
-                    bst.insert(value)
-                    print(f'Value [{value}] successfully inserted ✅')
-                except ValueError:
-                    print('\n[ERROR] Invalid value!\n')
+                while True:
+                    try:
+                        value = int(input('Which value to insert -> '))
+                        bst.insert(value)
+                        print(f'Value [{value}] successfully inserted ✅')
+                    except ValueError:
+                        print('\n[ERROR] Invalid value!\n')
+                        continue
+                    break
             case 2:
                 print(f'\n[MAX. Value]: {bst.search_max()}')
                 print()
@@ -39,10 +42,8 @@ def run_code():
             case 6:
                 pass
             case 7:
-                pass
-            case 8:
                 wich_traversal(bst)
-            case 9:
+            case 8:
                 if exit_program() == True:
                     break
                 else:
