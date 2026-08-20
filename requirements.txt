@@ -6,3 +6,15 @@ pytest==9.1.1
 
 # rich: used to display menu items, lessons, and trees in a more didactic and conceptual way
 rich==15.0.0
+
+# The Graphviz engine must be installed on the OS (Windows/Linux/macOS)
+# and added to the system PATH for the rendering engine to work.
+# It is not a pip-installable package, but a system dependency.
+# Installed version: Graphviz 15.1.1 (or newer)
+# https://graphviz.org/download/
+
+# Python library required to create graphs and communicate
+# with the Graphviz engine installed on the operating system.
+# The import and installation of this library serves to replace 
+# the buggy logic of trying to display a tree node by node in the terminal
+graphviz==15.1.1
