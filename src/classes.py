@@ -145,6 +145,10 @@ class BinaryTree:
         if node == ROOT:
             node = self.root
 
+        if node is None:
+            node = 'The tree is empty. Height is 0!'
+            return node
+
         height_left = 0 # { Values start at zero because in the conditions below we check IF the node value has an element;
         height_right = 0 # } if it does, we perform the calculation, otherwise the value remains zero
 
