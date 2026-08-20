@@ -168,14 +168,8 @@ class BinaryTree:
             node = self.root
 
         if node is None: # If the node is empty or null, return zero nodes
-
-            TEXT = '\n[Empty tree]\n'
-
-            for char in TEXT:
-                sys.stdout.write(char) # Displays text letter by letter to make 
-                sys.stdout.flush() # the terminal output dynamic and interactive for the user
-                time.sleep(0.04)
-            return 0
+            node = 'The tree is empty. Therefore, we have 0 NODES!'
+            return node
 
         count_left = 0 
         count_right = 0 
@@ -196,13 +190,8 @@ class BinaryTree:
             node = self.root
 
         if node is None: # If the node is empty or null, return zero leaves
-            TEXT = '\n[Empty tree]\n'
-            
-            for char in TEXT:
-                sys.stdout.write(char) 
-                sys.stdout.flush()
-                time.sleep(0.04)
-            return 0
+            node = 'The tree is empty. Therefore, we have 0 LEAVES!'
+            return node
 
         if node.left is None and node.right is None: # Check if the current node has no children, making it a leaf
             return 1 # Return one because this current node is a leaf
