@@ -216,7 +216,7 @@ class Visualizer:
 
         self._write(f'\n{title}\n')
 
-        self._write('-' * len(title) + '\n')
+        self._write('=' * len(title) + '\n')
 
         # Traverses the values produced by the traversal algorithm
         for value in values:
@@ -226,6 +226,8 @@ class Visualizer:
             time.sleep(0.2)
         self._write('\n')
 
+        self._write('=' * len(title) + '\n')
+
     def display_symmetric(self):
         """ Displays the tree and then the symmetric traversal """
 
@@ -233,7 +235,7 @@ class Visualizer:
 
         # Executes the symmetric traversal and sends its values to the display
         self._display_traversal(
-            'Symmetric Traversal',
+            'Symmetric Traversal ⤵️ :',
             self._symmetric(self.bst.root)
         )
 
@@ -243,7 +245,7 @@ class Visualizer:
         self.display_tree()
 
         self._display_traversal(
-            'Pre-Order Traversal',
+            'Pre-Order Traversal ⤵️ :',
             self._preorder(self.bst.root)
         )
 
@@ -253,7 +255,7 @@ class Visualizer:
         self.display_tree()            
 
         self._display_traversal(
-            'Post-Order Traversal',
+            'Post-Order Traversal ⤵️ :',
             self._postorder(self.bst.root)
         )
 
@@ -263,7 +265,7 @@ class Visualizer:
         self.display_tree()
 
         self._display_traversal(
-            'Level-Order Traversal',
+            'Level-Order Traversal ⤵️ :',
             self._levelorder()
         )
 
