@@ -37,8 +37,9 @@ def run_code():
                 bst.preorder_traversal()
                 print('\n[LEVEL-ORDER]:')
                 bst.levelorder_traversal()
+                print()
             case 5:
-                pass
+                print(f'\n[HEIGHT of TREE]: {bst.height()}')
             case 6:
                 print(f'\n[N° of NODES]: {bst.count_nodes()}')
                 print(f'\n[N° of LEAVES]: {bst.count_leaves()}')
