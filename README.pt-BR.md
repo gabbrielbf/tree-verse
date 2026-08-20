@@ -121,5 +121,5 @@ O projeto encontra-se em desenvolvimento e novas funcionalidades serão adiciona
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/tree-verse.git
+git clone https://github.com/gabbrielbf/tree-verse.git
 cd tree-verse
