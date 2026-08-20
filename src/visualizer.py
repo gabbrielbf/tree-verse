@@ -50,7 +50,7 @@ class Visualizer:
         slots = 2 ** level
         distance = spacing * (2 ** (height - level - 1)) # <- Calculates the horizontal distance between the nodes of that level
 
-        return ((position * distance) + distance) // 2 # Returns the center position where the node should be drawn
+        return (position * distance) + (distance // 2) # Returns the center position where the node should be drawn
 
     def display_tree(self):
         """ Displays the tree in a hierarchical format """
@@ -73,7 +73,7 @@ class Visualizer:
         spacing = max(6, largest_value + 4) # Defines the minimum space between nodes
                                             # The value 6 prevents simple trees from getting too cramped
 
-        width = (2 ** height) * spacing # Defines the total available width to draw the tree,
+        width = (2 ** (height - 1)) * spacing # Defines the total available width to draw the tree,
                                         # the greater the height, the greater the required space
 
         for level_index, level in enumerate(levels): # <- Traverses each tree level starting from the root
