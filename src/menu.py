@@ -47,7 +47,7 @@ def numbered_menu():
         'Exit'
     ]
 
-    print('Choose one option bellow: ')
+    print('Choose one option bellow ⤵️ : ')
     print('-'*30)
     for index, option in enumerate(options, start=1): # <- This block reduces the repetition of multiple print statements 
         print('{} - {}'.format(index, option))        # print statements and keeps the code clean and elegant
