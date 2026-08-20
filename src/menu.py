@@ -62,6 +62,8 @@ def numbered_menu():
             print('[ERROR] option not found\n')
             continue
         else:
+            print(f'Option [{tentative}] selected.')
+            print('-'*30)
             break
 
     return tentative
@@ -126,6 +128,8 @@ def lessons():
             print('[ERROR] option not found\n')
             continue
         else:
+            print(f'Option [{tentative}] selected.')
+            print('-'*30)
             break
 
     return tentative
