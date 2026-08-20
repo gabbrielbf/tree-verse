@@ -40,7 +40,8 @@ def run_code():
             case 5:
                 pass
             case 6:
-                pass
+                print(f'\n[N° of NODES]: {bst.count_nodes()}')
+                print(f'\n[N° of LEAVES]: {bst.count_leaves()}')
             case 7:
                 wich_traversal(bst)
             case 8:
