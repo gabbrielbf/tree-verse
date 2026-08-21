@@ -1,5 +1,4 @@
 from classes import BinaryTree, Node, ROOT
-import sys, time
 
 class BinarySearchTree(BinaryTree):
 
