@@ -23,23 +23,42 @@ def run_code():
                         continue
                     break
             case 2:
-                print(f'\n[MAX. Value]: {bst.search_max()}')
-                print()
-                print(f'[MIN. Value]: {bst.search_min()}')
+                while True:
+                    try:
+                        choice = str(input('Do you want to search from a specific value? [Y/N]: ')).strip().upper()
+
+                        if choice == 'Y': # If the user decides to search for a specific value, this value becomes the new root/subtree
+                            value = int(input('Enter the value to become the new root/subtree -> '))
+
+                            subtree = bst.search(value)
+
+                            if (subtree is None or
+                                subtree.root is None):
+                                print(f'\n[ERROR] Value [{value}] does not exist in the tree!\n')
+                                continue
+
+                            print(f'\n[SUB-TREE MAX. Value]: {subtree.search_max()}') # Displaying largest and smallest values
+                            print(f'[SUB-TREE MIN. Value]: {subtree.search_min()}') # Starting from this new sub-tree
+                        else:
+                            print(f'\n[TREE MAX. Value]: {bst.search_max()}')
+                            print(f'[TREE MIN. Value]: {bst.search_min()}')
+                    except ValueError:
+                        print('\n[ERROR] Invalid value!')
+                        continue
+                    break
             case 3:
                 while True:
                     try:
                         value = int(input('Which value to remove -> '))
 
-                        subtree = bst.search(value)
-                        if (subtree is None or
+                        subtree = bst.search(value) # Using search to know if the value exists in the tree
+                        if (subtree is None or # If the node value is empty or if the tree itself is empty
                             subtree.root is None):
                             print(f'\n[ERROR] Value [{value}] does not exist in the tree!')
                             break
-                        
-                        bst.root = bst.remove(value)
-                        print(f'Value [{value}] successfully removed ❌')
 
+                        bst.root = bst.remove(value) # If it is not, perform the operation
+                        print(f'Value [{value}] successfully removed ❌')
                     except ValueError:
                         print('\n[ERROR] Invalid value!\n')
                         continue
