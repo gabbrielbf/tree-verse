@@ -27,7 +27,23 @@ def run_code():
                 print()
                 print(f'[MIN. Value]: {bst.search_min()}')
             case 3:
-                pass
+                while True:
+                    try:
+                        value = int(input('Which value to remove -> '))
+
+                        subtree = bst.search(value)
+                        if (subtree is None or
+                            subtree.root is None):
+                            print(f'\n[ERROR] Value [{value}] does not exist in the tree!')
+                            break
+                        
+                        bst.root = bst.remove(value)
+                        print(f'Value [{value}] successfully removed ❌')
+
+                    except ValueError:
+                        print('\n[ERROR] Invalid value!\n')
+                        continue
+                    break
             case 4:
                 print('\n[SYMMETRIC]:')
                 bst.symmetric_traversal()
