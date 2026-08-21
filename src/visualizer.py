@@ -103,6 +103,27 @@ class Visualizer:
 
         return graph
 
+    def _display_graph(self, filename='bst'):
+        """ Generates the tree visualization using Graphviz """
+
+        if self.bst.root is None:
+            self._write('\n[Empty tree]\n')
+            return
+
+        graph = self._build_graph()
+
+        # Generates the image and removes the temporary .dot file
+        graph.render(
+            filename=filename,
+            cleanup=True,
+            view=True
+        )
+
+    # Traversals below will use the logic developed previously and
+    # elaborate their own displays according to their respective characteristic:
+
+    def _symmetric(self, node):
+        pass
     
 def wich_traversal(bst):
     """ Function that will dynamically display each traversal 
