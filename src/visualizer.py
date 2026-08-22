@@ -223,6 +223,15 @@ class Visualizer:
             'bst_preorder'
         )
 
+    def display_postorder(self):
+        """ Displays the tree and then the post-order traversal """
+
+        self._display_traversal(
+            'Post-Order Traversal ⤵️ :',
+            self._postorder(self.bst.root),
+            'bst_postorder'
+        )
+
     
 
 def wich_traversal(bst):
