@@ -198,6 +198,13 @@ class Visualizer:
         self._write('\n')
         self._write('=' * len(title) + '\n')
 
+    def display_tree(self):
+        """ Displays the tree in Graphviz """
+
+        self._display_graph(
+            filename='bst'
+        )
+
     
 
 def wich_traversal(bst):
