@@ -128,6 +128,15 @@ class Visualizer:
             yield from self._symmetric(node.left)
             yield node.data
             yield from self._symmetric(node.right)
+
+    def _preorder(self, node):
+        """ Pre-order traversal: root -> left -> right """
+
+        if node:
+            yield node.data
+            yield from self._preorder(node.left)
+            yield from self._preorder(node.right)
+
     
 def wich_traversal(bst):
     """ Function that will dynamically display each traversal 
