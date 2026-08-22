@@ -144,7 +144,28 @@ class Visualizer:
             yield from self._postorder(node.left)
             yield from self._postorder(node.right)
             yield node.data
+            
+    def _levelorder(self):
+        """ Level-order traversal: top to bottom and left to right """
+
+        if self.bst.root is None:
+            return
+
+        # Creates a queue starting from the root
+        queue = [self.bst.root]
+
+        while queue:
     
+            node = queue.pop(0)
+
+            yield node.data
+
+            if node.left:
+                queue.append(node.left)
+
+            if node.right:
+                queue.append(node.right)
+                
 def wich_traversal(bst):
     """ Function that will dynamically display each traversal 
     of its respective property in the terminal to the 
