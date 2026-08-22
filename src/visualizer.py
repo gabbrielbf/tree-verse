@@ -62,7 +62,7 @@ class Visualizer:
             label = str(node.data)
 
             if node.data in order: # <- Shows the traversal position below the value
-                label = f'{node.data}\\n#{order[node.data]}' 
+                label = f'{node.data}\\N°{order[node.data]}' 
 
             graph.node(
                 node_id,
@@ -165,7 +165,41 @@ class Visualizer:
 
             if node.right:
                 queue.append(node.right)
-                
+
+    # Displaying
+    def _display_traversal(self, title, values, filename):
+        """ Displays the tree using Graphviz and shows the selected traversal """
+
+        if self.bst.root is None:
+            self._write('\n[Empty tree]\n')
+            return
+
+        # Converts the generator into a list so that the traversal
+        # can be used both for the graph and for the terminal
+        values = list(values)
+
+        self._write(f'\n{title}\n')
+        self._write('=' * len(title) + '\n')
+
+        graph = self._build_graph(values) # <- Creates the Graphviz graph using the selected traversal
+
+        # Generates the image and opens it automatically
+        graph.render(
+            filename=filename,
+            cleanup=True,
+            view=True
+        )
+
+        # Displays each value with a small animation
+        for value in values:
+            self._write(f'{value} ', 0.04)
+            time.sleep(0.2)
+
+        self._write('\n')
+        self._write('=' * len(title) + '\n')
+
+    
+
 def wich_traversal(bst):
     """ Function that will dynamically display each traversal 
     of its respective property in the terminal to the 
