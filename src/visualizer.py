@@ -205,6 +205,15 @@ class Visualizer:
             filename='bst'
         )
 
+    def display_symmetric(self):
+        """ Displays the tree and then the symmetric traversal """
+
+        self._display_traversal(
+            'Symmetric Traversal ⤵️ :',
+            self._symmetric(self.bst.root),
+            'bst_symmetric'
+        )
+
     
 
 def wich_traversal(bst):
