@@ -121,9 +121,13 @@ class Visualizer:
 
     # Traversals below will use the logic developed previously and
     # elaborate their own displays according to their respective characteristic:
-
     def _symmetric(self, node):
-        pass
+        """ Symmetric traversal: left -> root -> right """
+
+        if node:
+            yield from self._symmetric(node.left)
+            yield node.data
+            yield from self._symmetric(node.right)
     
 def wich_traversal(bst):
     """ Function that will dynamically display each traversal 
