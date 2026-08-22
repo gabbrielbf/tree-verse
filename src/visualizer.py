@@ -137,6 +137,13 @@ class Visualizer:
             yield from self._preorder(node.left)
             yield from self._preorder(node.right)
 
+    def _postorder(self, node):
+        """ Post-order traversal: left -> right -> root """
+
+        if node:
+            yield from self._postorder(node.left)
+            yield from self._postorder(node.right)
+            yield node.data
     
 def wich_traversal(bst):
     """ Function that will dynamically display each traversal 
