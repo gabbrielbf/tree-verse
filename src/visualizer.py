@@ -214,6 +214,15 @@ class Visualizer:
             'bst_symmetric'
         )
 
+    def display_preorder(self):
+        """ Displays the tree and then the pre-order traversal """
+
+        self._display_traversal(
+            'Pre-Order Traversal ⤵️ :',
+            self._preorder(self.bst.root),
+            'bst_preorder'
+        )
+
     
 
 def wich_traversal(bst):
