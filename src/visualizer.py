@@ -232,7 +232,14 @@ class Visualizer:
             'bst_postorder'
         )
 
-    
+    def display_level(self):
+        """ Displays the tree and then the level-order traversal """
+
+        self._display_traversal(
+            'Level-Order Traversal ⤵️ :',
+            self._levelorder(),
+            'bst_levelorder'
+        )
 
 def wich_traversal(bst):
     """ Function that will dynamically display each traversal 
