@@ -70,7 +70,7 @@ To maintain separation of responsibilities, the application is organized into di
 * **`src/menu.py`**: Responsible for displaying menus and handling the options selected by the user.
 * **`src/queue.py`**: Custom implementation of the **queue** data structure, used to support level-order traversal.
 * **`src/utils.py`**: Contains utility functions such as numeric option input validation and terminal clearing.
-* **`requirements.txt`**: Manages the external dependencies used by the project, such as `rich` and `pytest`.
+* **`requirements.txt`**: Manages the external dependencies used by the project, such as `rich`, `pytest` and `graphviz`.
 * **`tests/*`**: Directory intended for testing the project's features.
 
 ---
@@ -80,6 +80,7 @@ To maintain separation of responsibilities, the application is organized into di
 - **Python 3.8+**
 - **Rich** — terminal rendering and styling
 - **Pytest** — automated testing
+- **Graphviz** — displaying the structure in image format
 - **Git** — version control
 
 ---

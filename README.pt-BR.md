@@ -70,7 +70,7 @@ Para manter a separação de responsabilidades, a aplicação foi organizada em 
 * **`src/menu.py`**: Responsável pela exibição dos menus e pelo direcionamento das opções escolhidas pelo usuário.
 * **`src/queue.py`**: Implementação personalizada da estrutura de dados **fila**, utilizada como suporte para o percurso em nível.
 * **`src/utils.py`**: Reúne funções utilitárias, como leitura e validação de opções numéricas e limpeza do terminal.
-* **`requirements.txt`**: Gerencia as dependências externas utilizadas pelo projeto, como `rich` e `pytest`.
+* **`requirements.txt`**: Gerencia as dependências externas utilizadas pelo projeto, como `rich`, `pytest` e `graphviz`.
 * **`tests/*`**: Diretório destinado aos testes das funcionalidades do projeto.
 
 ---
@@ -80,6 +80,7 @@ Para manter a separação de responsabilidades, a aplicação foi organizada em 
 - **Python 3.8+**
 - **Rich** — renderização e estilização do conteúdo no terminal
 - **Pytest** — testes automatizados
+- **Graphviz** — exibição da estrutura em formato de imagem
 - **Git** — controle de versão
 
 ---
