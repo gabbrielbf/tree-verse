@@ -22,11 +22,14 @@ def read_numeric_option():
 def tip():
     """ Will only display an optional viewing tip to the user """
 
-    _temp_stack = """ Tip: for better visualization of the tree nodes, 
-I recommend using the following sequence of values 
-[50, 25, 75, 12, 37, 62, 87, 6, 18, 31, 43, 56, 68, 81, 93], 
+    _temp_stack = """ 🧩🔍 Tip: For better visualization of the tree nodes, 
+I recommend using the following sequence of values:
+
+[50, 25, 75, 12, 37, 62, 87, 6, 18, 31, 43, 56, 68, 81, 93],
 this way you will have a perfectly balanced tree of 15 nodes. 
-But if you prefer to implement your own values, just ignore this message and move on. """
+
+But if you prefer to implement your own values, 
+just ignore this message and move on. """
     TIP = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
     print('=' * 60)
