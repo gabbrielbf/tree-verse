@@ -1,9 +1,8 @@
-from lessons import (banner, what_is_nodes, what_is_leaves,
+from .lessons import (banner, what_is_nodes, what_is_leaves,
                      what_are_binarytree, what_are_height_depht_paths,
                      minimum_maximum_height, what_are_traversals, what_is_bst,
                      what_are_forests, what_is_subtree)
-from utils import read_numeric_option, clear_terminal
-# from lessons import 
+from .utils import read_numeric_option, clear_terminal
 
 def exit_program():
     """ function that exits (or not) the program
@@ -164,7 +163,7 @@ def teach_user():
             case 9:
                 what_is_bst()
 
-        again = str(input('Do you want to learn something else? ')).upper()
+        again = str(input('Do you want to learn something else?[Y/N]: ')).upper()
 
         if again != 'Y':
             print("Ok, let's move on to practice then")

@@ -1,5 +1,5 @@
 import sys, time
-from utils import clear_terminal
+from .utils import clear_terminal
 
 # Responsible for teaching the user everything about the "Tree" data structure.
 
@@ -300,6 +300,8 @@ the visitation order."""
         sys.stdout.flush()
         time.sleep(0.04)
     print()
+
+    print(DIVIDER)
 
     return
 

@@ -1,4 +1,4 @@
-from classes import BinaryTree, Node, ROOT
+from .classes import BinaryTree, Node, ROOT
 
 class BinarySearchTree(BinaryTree):
 

@@ -1,4 +1,4 @@
-from menu import traversals
+from .menu import traversals
 import time, sys
 from graphviz import Digraph # <- importing "Digraph" to replace the logic of displaying nodes in the terminal
 

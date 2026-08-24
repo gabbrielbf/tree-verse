@@ -1,5 +1,4 @@
 import os, sys, time
-from lessons import DIVIDER
 
 def clear_terminal():
     """ Function responsible for clearing the terminal on each iteration """
@@ -30,7 +29,7 @@ this way you will have a perfectly balanced tree of 15 nodes.
 But if you prefer to implement your own values, just ignore this message and move on. """
     TIP = "\n".join(l.center(57) for l in _temp_stack.splitlines())
 
-    print(DIVIDER)
+    print('=' * 60)
 
     for char in TIP: # <- this block displays letter by letter of the header
             sys.stdout.write(char)
@@ -38,4 +37,4 @@ But if you prefer to implement your own values, just ignore this message and mov
             time.sleep(0.02)
     print()
 
-    print(DIVIDER)
+    print('=' * 60)

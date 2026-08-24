@@ -1,4 +1,4 @@
-from queue import Queue
+from .queue import Queue
 import time, sys
 
 ROOT = 'root' # "Constant" to store the 'root' value

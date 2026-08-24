@@ -1,7 +1,7 @@
-from tree import BinarySearchTree
-from menu import numbered_menu, clear_terminal, teach_user, exit_program
-from utils import tip
-from visualizer import wich_traversal
+from .tree import BinarySearchTree
+from .menu import numbered_menu, clear_terminal, teach_user, exit_program
+from .utils import tip
+from .visualizer import wich_traversal
 
 bst = BinarySearchTree()
 
