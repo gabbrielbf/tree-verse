@@ -32,7 +32,8 @@ def banner():
 
 def what_is_nodes():
 
-    _temp_stack = """ - What are NODES? 
+    _temp_stack = """ - What are NODES?
+
 Connection of non-linear information through 
 a specific root. """
     NODES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
@@ -43,7 +44,7 @@ a specific root. """
     for char in NODES: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
@@ -53,6 +54,7 @@ a specific root. """
 def what_is_leaves():
 
     _temp_stack = """ - What are LEAVES 🍃 ? 
+
 Isolated nodes at the end of trees with no 
 connections below them. """
     LEAVES = "\n".join(l.center(57) for l in _temp_stack.splitlines())
@@ -63,7 +65,7 @@ connections below them. """
     for char in LEAVES: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
@@ -73,6 +75,7 @@ connections below them. """
 def what_are_forests():
 
     _temp_stack = """ - What are FORESTS?  🌳🌳🌳:
+
     Several sets of 2 or more isolated nodes 
     not connected to each other """
     FORESTS = "\n".join(l.center(57) for l in _temp_stack.splitlines())
@@ -83,7 +86,7 @@ def what_are_forests():
     for char in FORESTS: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
@@ -93,6 +96,7 @@ def what_are_forests():
 def what_is_subtree():
 
     _temp_stack = """ What is a SUBTREE? 🌳⤵️ :
+
 A subtree is a portion of a tree data structure 
 that consists of a specific node 
 (called the root of the subtree) and all of its 
@@ -108,7 +112,7 @@ the root of its own smaller, self-contained tree. """
     for char in SUBTREE:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
@@ -117,7 +121,8 @@ the root of its own smaller, self-contained tree. """
 
 def what_are_binarytree():
 
-    _temp_stack = """ - What is a BINARYTREE 🌳? 
+    _temp_stack = """ - What is a BINARYTREE 🌳?
+    
 It is a tree model that forces the developer to 
 provide exactly 2 children for every new node that 
 appears in the data structure. """
@@ -129,7 +134,7 @@ appears in the data structure. """
     for char in BINARYTREE: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
@@ -147,7 +152,7 @@ def what_are_height_depht_paths():
     for char in TITLE: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     _temp_stack = """ 1. Height - It is the length of the path between the root 
@@ -158,7 +163,7 @@ and the leaf of greatest depth. """
     for char in HEIGHT: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     _temp_stack = """ 2. Depht - It is the path distance from a given node to be 
@@ -168,7 +173,7 @@ selected by the user to the sentinel root of the tree."""
     for char in DEPTH: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     _temp_stack = """ 3. Path - It is the sequence of edges (connections) you 
@@ -178,7 +183,7 @@ selected by the user to the sentinel root of the tree."""
     for char in PATH: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
@@ -202,7 +207,7 @@ of the longest branch. """
     for char in MAXIMUM_HEIGHT: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     input('\n Press ENTER to continue...\n')
@@ -217,7 +222,7 @@ the top to the leaf located at the most superficial
     for char in MINIMUM_HEIGHT:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print() 
 
     print(DIVIDER)
@@ -226,7 +231,8 @@ the top to the leaf located at the most superficial
 
 def what_are_traversals():
 
-    _temp_stack = """ - What are TRAVERSALS ⤵️  ? 
+    _temp_stack = """ - What are TRAVERSALS ⤵️  ?
+
 Traversals define the order in which the nodes of 
 a tree are visited or processed. They are broadly 
 categorized into Depth-First Search (DFS) and 
@@ -239,7 +245,7 @@ Breadth-First Search (BFS). """
     for char in TITLE: 
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
     
     clear_terminal()
@@ -255,7 +261,7 @@ traverse the right subtree."""
     for char in SYMMETRIC:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print()
@@ -268,7 +274,7 @@ then traverse the right subtree."""
     for char in PREORDER:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print()
@@ -281,7 +287,7 @@ subtree, and finally visit the root. """
     for char in POSTORDER:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     clear_terminal()
@@ -298,7 +304,7 @@ the visitation order."""
     for char in LEVELORDER:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
@@ -307,7 +313,8 @@ the visitation order."""
 
 def what_is_bst():
 
-    _temp_stack = """ - What is a BST (Binary Search Tree) 🌳 ?  
+    _temp_stack = """ - What is a BST (Binary Search Tree) 🌳 ?
+
 A Binary Search Tree (BST) is a node-based data structure 
 where each node has at most two children (left and right). 
 Its defining property is order:
@@ -328,7 +335,7 @@ than the node's value.
     for char in BST:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     clear_terminal()
@@ -349,7 +356,7 @@ no right child. """
     for char in MINANDMAX:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     clear_terminal()
@@ -393,7 +400,7 @@ no right child. """
     for char in REMOVE:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
     print()
 
     print(DIVIDER)
