@@ -47,6 +47,15 @@ a specific root. """
         time.sleep(0.02)
     print()
 
+    TREE = """ 
+        A <- Root, parent of B, C but not of D. However, 
+       / \\           ↪️  a would be the "ancestor" of D    
+      B   C <- Tree structure (or internal nodes), 
+           \\   ↪️  nodes that are neither leaves nor the root
+            D 
+    """
+
+    print(TREE)
     print(DIVIDER)
 
     return 
@@ -68,6 +77,15 @@ connections below them. """
         time.sleep(0.02)
     print()
 
+    TREE = """ 
+        A <- Root, parent of B, C but not of D. However,
+       / \\            ↪️  a would be the "ancestor" of D 
+      B   C <- Tree structure (or internal nodes),
+           \\   ↪️  nodes that are neither leaves nor the root
+            D <- Leaf
+    """
+
+    print(TREE)
     print(DIVIDER)
 
     return 
@@ -89,6 +107,19 @@ def what_are_forests():
         time.sleep(0.02)
     print()
 
+    TREE = """ 
+        A } Forest 1
+       / \\
+      B   C         D } Forest 2
+                   / \\
+                  E   F
+
+            G } Forest 3
+           / \\
+          H   I  
+    """
+    
+    print(TREE)
     print(DIVIDER)
 
     return
