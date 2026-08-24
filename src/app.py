@@ -1,17 +1,18 @@
 from .tree import BinarySearchTree
-from .menu import numbered_menu, clear_terminal, teach_user, exit_program
-from .utils import tip
+from .menu import numbered_menu, clear_terminal, exit_program, teach_user
 from .visualizer import wich_traversal
+from .utils import tip
 
 bst = BinarySearchTree()
 
+teach_user()
+clear_terminal()
+tip()
+
 def run_code():
 
-    teach_user()
     while True:
-        
-        clear_terminal()
-        tip()
+
         clear_terminal()
         match numbered_menu():
 
