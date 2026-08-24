@@ -62,7 +62,7 @@ class Visualizer:
             label = str(node.data)
 
             if node.data in order: # <- Shows the traversal position below the value
-                label = f'{node.data}\\N°{order[node.data]}' 
+                label = f'{node.data}\\n#{order[node.data]}' 
 
             graph.node(
                 node_id,
