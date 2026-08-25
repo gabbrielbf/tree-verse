@@ -15,6 +15,10 @@
   <a href="#-licença">Licença</a>
 </p>
 
+<p align="center">
+  <img src="./assets/demonstration.gif" alt="Tree-verse Demo" width="85%">
+</p>
+
 # 🌳 Tree-verse: Lecionador Interativo de Árvores Binárias
 
 ## 📖 Sobre o projeto
