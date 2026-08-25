@@ -89,5 +89,3 @@ def run_code():
                     break
                 else:
                     continue
-
-run_code()
