@@ -1,13 +1,10 @@
-from .tree import BinarySearchTree
 from .menu import numbered_menu, clear_terminal, exit_program, teach_user
 from .visualizer import wich_traversal
 from .utils import tip
 
-bst = BinarySearchTree()
-
 teach_user()
 clear_terminal()
-tip()
+bst = tip()
 
 def run_code():
 
