@@ -1,4 +1,5 @@
 import os, sys, time
+from .tree import BinarySearchTree
 
 def clear_terminal():
     """ Function responsible for clearing the terminal on each iteration """
@@ -41,3 +42,28 @@ just ignore this message and move on. """
     print()
 
     print('=' * 60)
+
+    bst = BinarySearchTree()
+    
+    while True:
+        try:
+            choice = input("Do you want to use the suggested values? [Y/N]: ").strip().upper()
+
+            if choice == 'Y':
+                suggested_values = [50, 25, 75, 12, 37, 62, 87, 6, 18, 31, 43, 56, 68, 81, 93]
+                for value in suggested_values:
+                    bst.insert(value)
+                print("Values successfully added to the tree ✅")
+                break
+                
+            elif choice == 'N':
+                print("Let's do it your way ✊")
+                break
+                
+            else:
+                print("\n[ERROR] Invalid option! Please enter 'Y' or 'N'.\n")
+                
+        except ValueError as e:
+            print(f"\n[ERROR] Invalid value provided: {e}\n")
+
+    return bst
