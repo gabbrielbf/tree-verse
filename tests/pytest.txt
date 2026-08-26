@@ -1,0 +1,8 @@
+Pytest is basically an automatic quality inspector for the code. 
+Instead of testing everything manually every time you change something, 
+you write some quick tests and pytest runs all of them at once for us. If anything breaks, 
+it immediately tells you right where the error happened. 
+It makes the routine so much easier and gives you a lot of confidence when updating or refactoring the code.
+
+In this project, we're going to use it in all files that return something logical for how the program works, 
+like 'structures.py' or 'classes.py', which are basically the brain of this whole machine.
