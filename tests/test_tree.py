@@ -23,7 +23,10 @@ def test_nodes_behavior():
     assert bst.root.right.data > bst.root.data 
     assert bst.root.data > bst.root.left.data 
 
+def test_removing_nodes_behavior():
+    """ This test will check the logic 
+    for removal and finding the substitute """
 
-
+    pass
 
     
