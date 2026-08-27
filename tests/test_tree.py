@@ -24,9 +24,16 @@ def test_nodes_behavior():
     assert bst.root.data > bst.root.left.data 
 
 def test_removing_nodes_behavior():
-    """ This test will check the logic 
+    """ This test will check the logic
     for removal and finding the substitute """
 
-    pass
+    bst.insert(50)
+    bst.insert(25)
+    bst.insert(75)
 
-    
+    bst.root = bst.remove(50) # Removing the root from the tree
+
+    # Checking if the new root is 25 and if the removed value became None
+    assert bst.root.data == 75
+    assert bst.root.left.data == 25
+    assert bst.root.right is None
